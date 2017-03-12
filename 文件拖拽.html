@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box{
+			width:200px;
+			height: 200px;
+			margin:100px auto;		
+			box-shadow: 0 0 10px grey;
+			display:none;
+			text-align:center;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">文件放这里</div>
+	<script type="text/javascript">
+
+		var oBox=document.querySelector('#box');
+		var timer=null;
+
+		document.ondragover=function(){
+
+			clearTimeout(timer);
+			oBox.style.display='block';
+
+			timer=setTimeout(function(){
+				oBox.style.display='none';
+			},70)
+		}
+
+		oBox.ondragenter=function(ev){
+			this.innerHTML='松手';
+
+		}
+		oBox.ondragleave=function(ev){
+			this.innerHTML='请放到这里来'
+
+		}
+		oBox.ondragover=function(ev){
+			ev.preventDefault();
+		}
+
+		oBox.ondrop=function(ev){
+			var file=ev.dataTransfer.files[0];
+			var reader=new FileReader();
+			reader.readAsText(file);
+			reader.onload=function(ev){
+				console.log(reader.resault);
+			}
+			ev.preventDefault();
+		}
+		
+	</script>
+</body>
+</html>

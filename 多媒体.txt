@@ -1,0 +1,53 @@
+多媒体
+
+video、audio;
+html5出现之前：Flash       
+-------------------------
+<video></video> //aa <video src=""></video>
+			    //aa  <video src="" controls></video> 出现下边控制的行，就可以播放了
+			    //aa  <video src="" autoplay></video>直接可以播放了 muted静音的   loop循环播、
+视频格式:
+rmvb  avi mp4 mkv(高清) 3gp  wmv  //aa rmvb（有版权，需特定解码器）
+
+音频格式:
+mp3 wav(无损音频格式) fla  ogg acc midi flac 
+
+-----------------------------------------
+
+oVideo
+		muted boolean   静音
+		.valume=[0,1]    .../100   音量
+		.cuttentTime 
+		.duration  播放总长
+
+		.play ()播放
+		.pause()暂停
+		.webkitRequestFullscreen 全屏   //aa webkit 只在谷歌Safari中用
+		.mozRequestFullScreen全屏   //aa兼容火狐
+		
+		.ontimeupdate
+		.onended
+		
+oAuio  //aa  (可以new出来)
+	.src
+	.play()
+
+
+
+panel  
+
+toFixed(2)????/
+oninput
+selector的封装
+定时器：每播放一段时间获取进度（更顺滑）   改成currentTime(卡点)；
+拖拽 dateset版？？27号mingming  ||0??????/
+
+
+音频相关：   //aa 钢琴
+audio
+controls;
+
+display:flex;  flex布局方式，打乱的动态布局
+play   progress进度条   volume  time
+pauseSong()
+box-shadow:  参数？？？？、省？？？？？？

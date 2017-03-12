@@ -1,0 +1,13 @@
+文件拖拽： //aa  eg：QQ邮箱
+
+
+ondragover   让下一个事件可以触发
+
+ondragenter进入拖拽区   //aa onmouseenter
+ondragleave离开拖拽区	//aa onmouseleave
+ondrop: 
+
+ondragover   preventDefault让下一个事件可以触发
+ondrop:  preventDefault不让谷歌打开文件
+
+
